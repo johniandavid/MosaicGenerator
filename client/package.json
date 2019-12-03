@@ -1,0 +1,76 @@
+{
+  "name": "react-frontend",
+  "version": "1.0.0",
+  "description": "## Requirements",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development",
+    "cert": "./bin/generate_cert.sh server",
+    "host": "webpack-dev-server --mode development --devrig"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^4.0.0-beta.11",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^23.6.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "bootstrap": "^4.4.1",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mosaic-node-generator": "^1.1.5",
+    "node-fetch": "^2.6.0",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-bootstrap-slider": "^2.2.2",
+    "react-dom": "^16.12.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test/jestsetup.js"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnndavid/MosaicGenerator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnndavid/MosaicGenerator/issues"
+  },
+  "homepage": "https://github.com/johnndavid/MosaicGenerator#readme"
+}
