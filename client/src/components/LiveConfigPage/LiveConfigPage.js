@@ -111,7 +111,7 @@ export default class LiveConfigPage extends React.Component{
         //clearInterval(this.timer)
         //this.timer = null
         this.maxCreatedAt = Date.now().toString()
-        const URL = "https://d7b4dsgwd4.execute-api.us-east-1.amazonaws.com/dev-4/report?donationLimit=10&campaignLimit=0" //+ "&minCreatedAt=" + this.minCreatedAt + "&maxCreatedAt=" + this.maxCreatedAt
+        const URL = "https://d7b4dsgwd4.execute-api.us-east-1.amazonaws.com/dev-4/report?donationLimit=1000&campaignLimit=0" //+ "&minCreatedAt=" + this.minCreatedAt + "&maxCreatedAt=" + this.maxCreatedAt
 
         console.log(URL)
         console.log("Stopped Accepting Donations")

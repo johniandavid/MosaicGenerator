@@ -75,7 +75,7 @@ function saveImageToDisk(profile_image_url, localPath) {
     });
 }
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     next();
 });
 app.get("/", function (req, res) {
