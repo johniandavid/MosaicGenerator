@@ -1,0 +1,34 @@
+.App{
+    background-image: url("https://gamechangercharity.org/wp-content/themes/gcc/img/home/headerimg_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    padding: 80px;
+
+}
+.footer{
+    background-color: #282828;
+    padding-bottom: 300px;
+}
+
+.zoom {
+    background-image: url("../../../gcctw_100x100.png");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    position: absolute;
+    top:100px;
+    left: 115px;
+    width: 100px;
+    height: 100px;
+    transition: transform .6s;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.Button{
+    position: relative;
+}

@@ -1,0 +1,31 @@
+.LiveConfigPage{
+     font-family: "Times New Roman", Helvetica, sans-serif;
+ }
+
+.LiveConfigPage-light{
+    color:#232127;
+}
+
+.LiveConfigPage-dark{
+    color:#e5e3e8;
+}
+
+.File-Input{
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.Goal-Slider{
+    padding-top: 25px;
+}
+
+.Goal-Badge{
+    padding-left: 500px;
+}
+
+.Button{
+    padding-right: 10px;
+}
+.Buttons{
+    padding-top: 10px;
+    justify-content: center;
+}

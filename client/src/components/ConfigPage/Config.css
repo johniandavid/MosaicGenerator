@@ -1,0 +1,30 @@
+.Config{
+    font-family: "Times New Roman", Helvetica, sans-serif;
+}
+
+.Config-light{
+    color:#232127;
+}
+
+.Config-dark{
+    color:#e5e3e8;
+}
+.App{
+    padding-top: 50px;
+}
+
+.File-Input{
+    padding-bottom: 30px;
+}
+
+.Goal-Badge{
+    padding-left: 500px;
+}
+
+.Button{
+    padding-right: 10px;
+}
+.Buttons{
+    justify-content: center;
+}
+
