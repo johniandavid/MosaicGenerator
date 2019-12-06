@@ -24,7 +24,7 @@ module.exports = (_env,argv)=> {
       Panel:{
         path:"./src/Panel.js",
         outputHtml:"panel.html",
-        build:false
+        build:true
       },
       Config:{
         path:"./src/Config.js",
