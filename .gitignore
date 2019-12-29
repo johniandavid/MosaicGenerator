@@ -8,9 +8,8 @@ client/tmp
 client/out-tsc
 
 # dependencies
-client/node_modules
-webserver/node_modules
-webserver/libraries/mosaic-node-generator/node_modules
+client/node_modules/
+webserver/node_modules/
 
 
 # misc
