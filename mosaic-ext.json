@@ -1,7 +1,7 @@
 {
   "allowHttpBackend": false,
   "backendCommand": "node MosaicGenerator",
-  "backendFolderName": "/Users/johnndavid_/Documents/Github/MosaicGenerator/webserver/services/MosaicGenerator",
+  "backendFolderName": "/Users/johnndavid_/Documents/Github/MosaicGenerator/webserver/src/services/MosaicGenerator",
   "extensionViews": [
     {
       "id": "3",
