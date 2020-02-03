@@ -10,6 +10,7 @@ client/out-tsc
 # dependencies
 client/node_modules/
 webserver/node_modules/
+webserver/libraries/mosaic_node_generator/node_modules/
 
 
 # misc
