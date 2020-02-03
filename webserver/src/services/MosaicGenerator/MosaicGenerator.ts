@@ -1,7 +1,7 @@
 import {Donation} from "../../data/Donation";
 import {Donations} from "../../data/Donations";
-import {JimpImage} from "../../../libraries/mosaic-node-generator2/src/jimp-image";
-import {MosaicImage} from "../../../libraries/mosaic-node-generator2/src/mosaic-image";
+import {JimpImage} from "../../../libraries/mosaic-node-generator/src/jimp-image";
+import {MosaicImage} from "../../../libraries/mosaic-node-generator/src/mosaic-image";
 //import {mosaic} from "../../../libraries/mosaic-node-generator/index";
 
 //const fs = require('fs');
