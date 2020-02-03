@@ -63,7 +63,6 @@ var MosaicImage = /** @class */ (function () {
         this.thumbsDirectoryFromRead = thumbsDirectoryFromRead ? thumbsDirectoryFromRead : null;
         this.thumbsDirectoryToWrite = thumbsDirectoryToWrite ? thumbsDirectoryToWrite : null;
         this.enableConsoleLogging = enableConsoleLogging;
-        this.outputImageName = "";
         this._prepare();
     }
     /**
@@ -397,37 +396,34 @@ var MosaicImage = /** @class */ (function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
             var _generate = function () { return __awaiter(_this, void 0, void 0, function () {
-                var _a;
-                return __generator(this, function (_b) {
-                    switch (_b.label) {
+                var outputImageName;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
                         case 0: 
                         //First, we read the tiles from disk
                         return [4 /*yield*/, this.readTiles()["catch"](function (err) { return Promise.reject(err); })];
                         case 1:
                             //First, we read the tiles from disk
-                            _b.sent();
+                            _a.sent();
                             if (!(this.tiles.length > 0)) return [3 /*break*/, 4];
                             //Then we process the image and generate the mosaic
                             return [4 /*yield*/, this.processRowsAndColumns(0, 0, this.rows, this.columns)["catch"](function (err) { return Promise.reject(err); })];
                         case 2:
                             //Then we process the image and generate the mosaic
-                            _b.sent();
+                            _a.sent();
                             console.log('Saving mosaic image...');
-                            //Save the image in disk
-                            _a = this;
                             return [4 /*yield*/, this.image.save()["catch"](function (err) { return Promise.reject(err); })];
                         case 3:
-                            //Save the image in disk
-                            _a.outputImageName = _b.sent();
+                            outputImageName = _a.sent();
                             if (this.enableConsoleLogging)
-                                console.log('Mosaic image saved! --> ' + this.outputImageName);
+                                console.log('Mosaic image saved! --> ' + outputImageName);
                             //Finally we generate the thumbs folder in order to save time in following executions
                             this.generateThumbs();
                             resolve();
                             return [3 /*break*/, 5];
                         case 4:
                             reject("Tiles were not loaded");
-                            _b.label = 5;
+                            _a.label = 5;
                         case 5: return [2 /*return*/];
                     }
                 });

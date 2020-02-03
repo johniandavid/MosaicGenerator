@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const jimp_image_1 = require("../../lib/jimp-image");
-const mosaic_image_1 = require("../../lib/mosaic-image");
+const jimp_image_1 = require("./../../lib/jimp-image");
+const mosaic_image_1 = require("./../../lib/mosaic-image");
 const chai_1 = require("chai");
 require("mocha");
 describe('MosaicImage', function () {

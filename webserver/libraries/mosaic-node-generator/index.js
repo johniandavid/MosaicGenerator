@@ -79,11 +79,11 @@ function mosaic(inputImagePath, tilesDirectory, cellWidth, cellHeight, columns, 
                     if (err_1) {
                         console.error(err_1);
                     }
-                    return [2 /*return*/, mosaicImage.outputImageName];
+                    _c.label = 4;
                 case 4: return [2 /*return*/];
             }
         });
     }); };
-    return _generateMosaic();
+    _generateMosaic();
 }
 exports.mosaic = mosaic;

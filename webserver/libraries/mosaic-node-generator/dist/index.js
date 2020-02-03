@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mosaic_default_config_json_1 = require("./lib/mosaic-default-config.json.d.ts");
+const mosaic_default_config_json_1 = require("./lib/mosaic-default-config.json");
 exports.CONFIG = mosaic_default_config_json_1.CONFIG;
 const rgb_1 = require("./lib/rgb");
 exports.RGB = rgb_1.RGB;

@@ -1,33 +1,10 @@
 {
   "allowHttpBackend": false,
-  "backendCommand": "node MosaicGenerator",
-  "backendFolderName": "/Users/johnndavid_/Documents/Github/MosaicGenerator/webserver/src/services/MosaicGenerator",
+  "backendCommand": "",
+  "backendFolderName": "",
   "extensionViews": [
     {
-      "id": "3",
-      "label": "",
-      "channelId": "472536706",
-      "configurationAnchor": "panel",
-      "displayChannelName": "johnndavid25",
-      "type": "dashboard",
-      "features": {
-        "isChatEnabled": false
-      },
-      "linked": true,
-      "linkedUserId": "265737932",
-      "mode": "dashboard",
-      "isPopout": false,
-      "role": "Broadcaster",
-      "x": 0,
-      "y": 0,
-      "orientation": "Portrait",
-      "frameSize": {
-        "width": 640,
-        "height": 480
-      }
-    },
-    {
-      "id": "4",
+      "id": "1",
       "label": "",
       "channelId": "472536706",
       "configurationAnchor": "panel",
@@ -50,8 +27,6 @@
       }
     }
   ],
-  "frontendCommand": "npm run start ",
-  "frontendFolderName": "/Users/johnndavid_/Documents/Github/MosaicGenerator/client",
   "manifest": {
     "anchor": "panel",
     "assetUrls": [],
@@ -84,41 +59,41 @@
     "viewerSummary": "",
     "viewerUrl": "http://localhost:8080/panel.html",
     "viewerUrls": {
-      "component": "http://localhost:8080/video_component.html",
       "panel": "http://localhost:8080/panel.html",
-      "videoOverlay": "http://localhost:8080/video_overlay_main_view.html"
+      "videoOverlay": "http://localhost:8080/video_overlay_main_view.html",
+      "component": "http://localhost:8080/video_component.html"
     },
     "views": {
+      "panel": {
+        "viewerUrl": "http://localhost:8080/panel.html",
+        "height": 300,
+        "canLinkExternalContent": false
+      },
+      "videoOverlay": {
+        "viewerUrl": "http://localhost:8080/video_overlay_main_view.html",
+        "canLinkExternalContent": false
+      },
       "component": {
+        "viewerUrl": "http://localhost:8080/video_component.html",
+        "aspectWidth": 0,
         "aspectHeight": 0,
         "aspectRatioX": 300,
         "aspectRatioY": 200,
-        "aspectWidth": 0,
         "autoscale": true,
-        "canLinkExternalContent": false,
         "scalePixels": 1024,
-        "size": 0,
         "targetHeight": 3000,
-        "viewerUrl": "http://localhost:8080/video_component.html",
+        "size": 0,
         "zoom": false,
-        "zoomPixels": 0
+        "zoomPixels": 0,
+        "canLinkExternalContent": false
       },
       "config": {
-        "canLinkExternalContent": true,
-        "viewerUrl": "http://localhost:8080/config.html"
+        "viewerUrl": "http://localhost:8080/config.html",
+        "canLinkExternalContent": true
       },
       "liveConfig": {
-        "canLinkExternalContent": true,
-        "viewerUrl": "http://localhost:8080/live_config.html"
-      },
-      "panel": {
-        "canLinkExternalContent": false,
-        "height": 300,
-        "viewerUrl": "http://localhost:8080/panel.html"
-      },
-      "videoOverlay": {
-        "canLinkExternalContent": false,
-        "viewerUrl": "http://localhost:8080/video_overlay_main_view.html"
+        "viewerUrl": "http://localhost:8080/live_config.html",
+        "canLinkExternalContent": true
       }
     },
     "whitelistedConfigUrls": [
@@ -126,5 +101,7 @@
     ],
     "whitelistedPanelUrls": []
   },
+  "frontendCommand": "",
+  "frontendFolderName": "",
   "name": "mosaic-ext"
 }

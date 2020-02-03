@@ -39,7 +39,6 @@ export class MosaicImage {
     public thumbsDirectoryToWrite: string | null;
     //If we want to enable logs in the console
     public enableConsoleLogging: boolean;
-    public outputImageName: string;
 
     constructor( 
         image: Image, 
@@ -50,7 +49,7 @@ export class MosaicImage {
         rows?: number,
         thumbsDirectoryFromRead?: string,
         thumbsDirectoryToWrite?: string,
-        enableConsoleLogging: boolean = true,
+        enableConsoleLogging: boolean = true
     ) {
         this.image = image;
         this.tilesDirectory = tilesDirectory ? tilesDirectory : CONFIG.tiles_directory;
@@ -61,7 +60,6 @@ export class MosaicImage {
         this.thumbsDirectoryFromRead = thumbsDirectoryFromRead ? thumbsDirectoryFromRead : null;
         this.thumbsDirectoryToWrite = thumbsDirectoryToWrite ? thumbsDirectoryToWrite : null;
         this.enableConsoleLogging = enableConsoleLogging;
-        this.outputImageName = "";
         this._prepare();
     }
 
@@ -327,8 +325,8 @@ export class MosaicImage {
                     await this.processRowsAndColumns( 0, 0, this.rows, this.columns ).catch( (err) => Promise.reject(err) );
                     console.log('Saving mosaic image...');
                     //Save the image in disk
-                    this.outputImageName = await this.image.save().catch( (err) => Promise.reject(err) );
-                    if(this.enableConsoleLogging) console.log('Mosaic image saved! --> ' + this.outputImageName);
+                    let outputImageName = await this.image.save().catch( (err) => Promise.reject(err) );
+                    if(this.enableConsoleLogging) console.log('Mosaic image saved! --> ' + outputImageName);
                     //Finally we generate the thumbs folder in order to save time in following executions
                     this.generateThumbs();
                     resolve();
@@ -340,4 +338,5 @@ export class MosaicImage {
             _generate().catch( (err) => { reject(err)} );
         });
     }
+
 }

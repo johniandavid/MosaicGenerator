@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mosaic_default_config_json_1 = require("./mosaic-default-config.json.d.ts");
+const mosaic_default_config_json_1 = require("./mosaic-default-config.json");
 const jimp_image_1 = require("./jimp-image");
 const fs = require("fs");
 class TileIndexAndDifference {

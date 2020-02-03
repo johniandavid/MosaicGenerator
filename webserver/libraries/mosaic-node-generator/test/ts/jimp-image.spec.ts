@@ -1,8 +1,8 @@
-import { JimpImage } from '../../lib/jimp-image';
+import { JimpImage } from './../../lib/jimp-image';
 import { expect, assert } from 'chai';
 import 'mocha';
 import * as fs from 'fs';
-import { RGB } from '../../lib/rgb';
+import { RGB } from './../../lib/rgb';
 
 describe( 'JimpImage', function() {
 

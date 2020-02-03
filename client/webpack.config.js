@@ -8,38 +8,37 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // defines where the bundle file will live
 const bundlePath = path.resolve(__dirname, "dist/")
 
-
 module.exports = (_env,argv)=> {
   let entryPoints = {
-      VideoComponent:{
-        path:"./src/VideoComponent.js",
-        outputHtml:"video_component.html",
-        build:true
-      },
-      VideoOverlay: {
-        path: "./src/VideoOverlay.js",
-        outputHtml: "video_overlay.html",
-        build: false
-      },
-      Panel:{
-        path:"./src/Panel.js",
-        outputHtml:"panel.html",
-        build:true
-      },
-      Config:{
-        path:"./src/Config.js",
-        outputHtml:"config.html",
-        build:false
-      },
-      LiveConfig:{
-        path:"./src/LiveConfig.js",
-        outputHtml:"live_config.html",
-        build:true
-      },
-      Mobile:{
-        path:"./src/Mobile.js",
-        outputHtml:"mobile.html",
-        build:false
+    VideoViewer:{
+      path:"./src/VideoViewer.js",
+      outputHtml:"video_viewer.html",
+      build:true
+    },
+    VideoStreamer:{
+      path:"./src/VideoStreamer.js",
+      outputHtml:"video_streamer.html",
+      build:true
+    },
+    Panel:{
+      path:"./src/Panel.js",
+      outputHtml:"panel.html",
+      build:false
+    },
+    Config:{
+      path:"./src/Config.js",
+      outputHtml:"config.html",
+      build:true
+    },
+    LiveConfig:{
+      path:"./src/LiveConfig.js",
+      outputHtml:"live_config.html",
+      build:true
+    },
+    Mobile:{
+      path:"./src/Mobile.js",
+      outputHtml:"mobile.html",
+      build:false
     }
   }
 
@@ -69,7 +68,7 @@ module.exports = (_env,argv)=> {
     //entry points for webpack- remove if not used/needed
     entry,
     optimization: {
-      minimize: false, // neccessary to pass Twitch's review process
+      minimize: false, // this setting is default to false to pass review more easily. you can opt to set this to true to compress the bundles, but also expect an email from the review team to get the full source otherwise. 
     },
     module: {
       rules: [
@@ -81,6 +80,14 @@ module.exports = (_env,argv)=> {
         {
           test: /\.css$/,
           use: [ 'style-loader', 'css-loader' ]
+        },
+        {
+          test: /\.scss$/,
+          use: [
+              "style-loader", // creates style nodes from JS strings
+              "css-loader", // translates CSS into CommonJS
+              "sass-loader", // compiles Sass to CSS, using Node Sass by default
+          ]
         },
         {
           test: /\.(jpe?g|png|gif|svg)$/i, 

@@ -20,33 +20,32 @@ import { catchEm } from './lib/utility';
 export function mosaic(
     inputImagePath: string,
     tilesDirectory?: string,
-    cellWidth?: number,
-    cellHeight?: number,
-    columns?: number,
+    cellWidth?: number, 
+    cellHeight?: number, 
+    columns?: number, 
     rows?: number,
     thumbsDirectoryFromRead?: string,
     thumbsDirectoryToWrite?: string,
     enableConsoleLogging: boolean = true
 ) {
     const _generateMosaic = async() => {
-
+        
         let [err, img] = await catchEm( JimpImage.read( inputImagePath ) );
         if( err ) {
             console.error(err);
         }
         else {
             let image: Image = new JimpImage( img );
-            let mosaicImage = new MosaicImage( image, tilesDirectory, cellWidth, cellHeight, columns, rows, thumbsDirectoryFromRead, thumbsDirectoryToWrite, enableConsoleLogging );
+            let mosaicImage = 
+                new MosaicImage( image, tilesDirectory, cellWidth, cellHeight, columns, rows, thumbsDirectoryFromRead, thumbsDirectoryToWrite, enableConsoleLogging );
             let [err, _] = await catchEm( mosaicImage.generate() );
             if( err ) {
                 console.error(err);
             }
-
-            return mosaicImage.outputImageName;
         }
     };
-
-    return _generateMosaic();
+    
+    _generateMosaic();
 }
 
 export { Image, JimpImage, MosaicImage, RGB, CONFIG };

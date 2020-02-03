@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const rgb_1 = require("./rgb");
 const Jimp = require("jimp");
-const mosaic_default_config_json_1 = require("./mosaic-default-config.json.d.ts");
+const mosaic_default_config_json_1 = require("./mosaic-default-config.json");
 class JimpImage {
     constructor(image) {
         this.image = image;

@@ -1,6 +1,6 @@
-import { JimpImage } from '../../lib/jimp-image';
-import { MosaicImage } from '../../lib/mosaic-image';
-import { Image } from '../../lib/image';
+import { JimpImage } from './../../lib/jimp-image';
+import { MosaicImage } from './../../lib/mosaic-image';
+import { Image } from './../../lib/image';
 import { expect, assert } from 'chai';
 import 'mocha';
 

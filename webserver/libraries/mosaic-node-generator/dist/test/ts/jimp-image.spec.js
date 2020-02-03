@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const jimp_image_1 = require("../../lib/jimp-image");
+const jimp_image_1 = require("./../../lib/jimp-image");
 const chai_1 = require("chai");
 require("mocha");
 const fs = require("fs");
