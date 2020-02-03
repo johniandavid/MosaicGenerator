@@ -33,12 +33,6 @@ export class MosaicGenerator {
             return new Donation(donation.createdAt, donation.display_name, donation.amount, donation.twitchUserId, donation.channel_id, donation.profile_image_url);
         });
 
-        /**
-        for (let i = 0; i < donations.donations_arr.length; i++) {
-            saveImageToDisk(donations.donations_arr[i].profile_image_url, "./input/tilesDirectory/" + "input-image-" + (i + 1) + ".jpg");
-        }
-        */
-
         let image_urls = donations.donations_arr.map(function(donation){
             return donation.profile_image_url;
         });
@@ -47,22 +41,9 @@ export class MosaicGenerator {
 
     }
 
-    /**
-
-    sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-     */
-
     generate(){
         fetchDonationJson(this.url).then(this.parseDonations)
 
-        /**
-        this.sleep(10000)
-            .then(() => {
-                mosaic(this.filePath, './input/tilesDirectory')
-            });
-         */
     }
 }
 
@@ -80,26 +61,6 @@ function fetchDonationJson(url : string){
             });
     });
 }
-
-
-/**
- * Fetches the images from the Donations objects and saves them to a local directory. CHANGE WHEN WE UPDATE THE MOSAIC GENERATOR BC
- * WE DONT NEED TO SAVE TO A DIRECTORY.
- * @param profile_image_url : string (profile image)
- * @param localPath : string (path to tilesDirectory)
- */
-/**
-function saveImageToDisk(profile_image_url: string, localPath: string) {
-    https.get(profile_image_url, function (response) {
-        if (response.statusCode == 200) {
-            response.pipe(fs.createWriteStream(localPath));
-            console.log("File Name: " + localPath + " Url: " + profile_image_url + " statusCode: ", response.statusCode);
-        }
-    }).on('error', function (e) {
-        console.log(e);
-    });
-}
-*/
 
 const express = require( "express" );
 const app = express();
